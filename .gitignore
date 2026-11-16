@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+.npm/
+
+# Build artifacts & packages (>100MB blocked by GitHub)
+dist/
+release/
+*.dmg
+*.exe
+*.app
+*.zip
+Statement Studio.app/
+StatementStudioBinary
+
+# OS files
+.DS_Store
+Thumbs.db

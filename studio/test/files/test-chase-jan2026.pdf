@@ -1,0 +1,86 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 2622 >>
+stream
+BT /F1 16 Tf 50 750 Td (Chase) Tj ET
+BT /F1 9 Tf 50 732 Td (JPMorgan Chase Bank, N.A.  P O Box 182051  Columbus, OH 43218) Tj ET
+BT /F1 10 Tf 50 700 Td (SAMPLE TEST COMPANY LLC) Tj ET
+BT /F1 10 Tf 350 700 Td (Account Number: 000123456789) Tj ET
+BT /F1 10 Tf 350 686 Td (January 1, 2026 through January 31, 2026) Tj ET
+BT /F1 12 Tf 50 650 Td (CHECKING SUMMARY) Tj ET
+BT /F1 10 Tf 50 632 Td (Beginning Balance) Tj ET
+BT /F1 10 Tf 400 632 Td ($5,000.00) Tj ET
+BT /F1 10 Tf 50 618 Td (Deposits and Additions) Tj ET
+BT /F1 10 Tf 400 618 Td (3,250.00) Tj ET
+BT /F1 10 Tf 50 604 Td (Electronic Withdrawals) Tj ET
+BT /F1 10 Tf 400 604 Td (-587.32) Tj ET
+BT /F1 10 Tf 50 590 Td (Ending Balance) Tj ET
+BT /F1 10 Tf 400 590 Td ($7,662.68) Tj ET
+BT /F1 12 Tf 50 555 Td (TRANSACTION DETAIL) Tj ET
+BT /F1 9 Tf 50 537 Td (DATE) Tj ET
+BT /F1 9 Tf 95 537 Td (DESCRIPTION) Tj ET
+BT /F1 9 Tf 430 537 Td (AMOUNT) Tj ET
+BT /F1 9 Tf 500 537 Td (BALANCE) Tj ET
+BT /F1 9 Tf 95 522 Td (Beginning Balance) Tj ET
+BT /F1 9 Tf 500 522 Td ($5,000.00) Tj ET
+BT /F1 9 Tf 50 507 Td (01/03) Tj ET
+BT /F1 9 Tf 95 507 Td (Card Purchase 01/02 Amazon Mktp US*2K4AB1C23 Amzn.com/bill WA Card 1234) Tj ET
+BT /F1 9 Tf 442.4 507 Td (-45.67) Tj ET
+BT /F1 9 Tf 500 507 Td (4,954.33) Tj ET
+BT /F1 9 Tf 50 492 Td (01/05) Tj ET
+BT /F1 9 Tf 95 492 Td (Payroll Direct Deposit ACME CORP PPD ID: 1234567890) Tj ET
+BT /F1 9 Tf 433.2 492 Td (2,500.00) Tj ET
+BT /F1 9 Tf 500 492 Td (7,454.33) Tj ET
+BT /F1 9 Tf 50 477 Td (01/09) Tj ET
+BT /F1 9 Tf 95 477 Td (Card Purchase 01/08 Starbucks Store 12345 Seattle WA Card 1234) Tj ET
+BT /F1 9 Tf 447 477 Td (-6.25) Tj ET
+BT /F1 9 Tf 500 477 Td (7,448.08) Tj ET
+BT /F1 9 Tf 50 462 Td (01/12) Tj ET
+BT /F1 9 Tf 95 462 Td (Zelle Payment To John Smith 123456789) Tj ET
+BT /F1 9 Tf 437.8 462 Td (-200.00) Tj ET
+BT /F1 9 Tf 500 462 Td (7,248.08) Tj ET
+BT /F1 9 Tf 50 447 Td (01/15) Tj ET
+BT /F1 9 Tf 95 447 Td (Check # 1001) Tj ET
+BT /F1 9 Tf 437.8 447 Td (-300.00) Tj ET
+BT /F1 9 Tf 500 447 Td (6,948.08) Tj ET
+BT /F1 9 Tf 50 432 Td (01/20) Tj ET
+BT /F1 9 Tf 95 432 Td (Card Purchase 01/19 Amazon Mktp US*9XY12Z3 Amzn.com/bill WA Card 1234) Tj ET
+BT /F1 9 Tf 442.4 432 Td (-23.40) Tj ET
+BT /F1 9 Tf 500 432 Td (6,924.68) Tj ET
+BT /F1 9 Tf 50 417 Td (01/25) Tj ET
+BT /F1 9 Tf 95 417 Td (Deposit 4471) Tj ET
+BT /F1 9 Tf 442.4 417 Td (750.00) Tj ET
+BT /F1 9 Tf 500 417 Td (7,674.68) Tj ET
+BT /F1 9 Tf 50 402 Td (01/28) Tj ET
+BT /F1 9 Tf 95 402 Td (Monthly Service Fee) Tj ET
+BT /F1 9 Tf 442.4 402 Td (-12.00) Tj ET
+BT /F1 9 Tf 500 402 Td (7,662.68) Tj ET
+BT /F1 9 Tf 95 387 Td (Ending Balance) Tj ET
+BT /F1 9 Tf 500 387 Td ($7,662.68) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000002915 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+3012
+%%EOF

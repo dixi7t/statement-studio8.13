@@ -1,0 +1,213 @@
+/* ==========================================================================
+   Statement Studio — Professional theme (V8.13)
+   Neutral greys, solid surfaces, one ink accent. Colour is reserved for
+   meaning: green = money in / OK, red = money out / error, amber = warning.
+   No gradients, glass, glows or pill shapes. Loaded after the original
+   styles, so removing this block restores the V8.12 look.
+   ========================================================================== */
+
+/* ---------- palette: dark (default) ---------- */
+:root {
+  --bg: #121316; --bg-2: #121316;
+  --surface: #1a1b1f; --surface-2: #1f2024; --surface-3: #26272c;
+  --ink: #ececef; --muted: #a3a3ab; --faint: #85858e;
+  --line: #2b2c31; --line-strong: #3a3b41;
+  --accent: #ececef; --accent-2: #ececef; --accent-soft: rgba(255, 255, 255, 0.06);
+  --grad: #ececef; --on-grad: #121316;
+  --warn: #e5484d; --warn-soft: rgba(229, 72, 77, 0.10);
+  --warn-amber: #d29922; --amber-soft: rgba(210, 153, 34, 0.10);
+  --ok: #3fb27f; --ok-soft: rgba(63, 178, 127, 0.10);
+  --r-lg: 8px; --r-md: 6px; --r-sm: 4px;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --glow: 0 0 0 1px var(--line-strong);
+  --sans: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ---------- palette: light ---------- */
+body.app-day {
+  --bg: #f4f4f5; --bg-2: #f4f4f5;
+  --surface: #ffffff; --surface-2: #fafafa; --surface-3: #f1f1f3;
+  --ink: #18181b; --muted: #52525b; --faint: #71717a;
+  --line: #e4e4e7; --line-strong: #d4d4d8;
+  --accent: #18181b; --accent-2: #18181b; --accent-soft: rgba(24, 24, 27, 0.05);
+  --grad: #18181b; --on-grad: #ffffff;
+  --warn: #c62828; --warn-soft: rgba(198, 40, 40, 0.07);
+  --warn-amber: #a15c00; --amber-soft: rgba(161, 92, 0, 0.08);
+  --ok: #1e7d4f; --ok-soft: rgba(30, 125, 79, 0.08);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --glow: 0 0 0 1px var(--line-strong);
+}
+
+/* time-of-day tints off */
+body, body[data-phase], body.app-day[data-phase] { --sky-glow: transparent !important; --phase: var(--muted) !important; }
+
+/* ---------- base ---------- */
+html, body { background: var(--bg) !important; }
+body { background-image: none !important; letter-spacing: 0; }
+::selection { background: rgba(127, 127, 140, 0.35); color: inherit; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+code { color: var(--ink); border-radius: var(--r-sm); }
+
+/* no glass anywhere */
+.side-block, .panel, .queue, .progress, .dl-menu, .modal, .recon-drop, .ocr-panel,
+.mode-glider, .idle-notice, #lock .glass {
+  -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+}
+
+/* ---------- typography: sentence-case labels ---------- */
+label, .panel-head, .banner-title, .side-label, .stat span:first-child,
+.txn-table th, .recon-table th, .pivot-head, .dl-menu .dl-head, .bulk-title,
+.recon-summary-card .rs-label, .ocr-compare th, .ssx-rt th, .recon-vs, .eyebrow,
+#lock .cal-h, #lock .eyebrow, #lock .where {
+  text-transform: none !important; letter-spacing: 0 !important;
+}
+label { font-size: 12px; font-weight: 600; color: var(--muted); }
+.panel-head { font-size: 13px; font-weight: 600; color: var(--ink); }
+.panel-head .hint { font-size: 12px; }
+.txn-table th, .recon-table th, .pivot-head, .ssx-rt th { font-size: 11.5px; font-weight: 600; }
+.stat span:first-child { font-size: 11.5px; font-weight: 500; }
+.banner-title { font-size: 13px; font-weight: 600; color: var(--ink); }
+
+/* ---------- masthead ---------- */
+h1, body.app-day .masthead h1 {
+  background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink);
+  letter-spacing: -0.015em; font-weight: 650;
+}
+.edition { -webkit-text-fill-color: var(--muted); }
+.brand-mark { filter: none; }
+.eyebrow { color: var(--muted); font-weight: 500; }
+.eyebrow::before, #lock .eyebrow::before { background: var(--ok); box-shadow: none; }
+
+/* ---------- surfaces ---------- */
+.panel, .side-block { border-radius: var(--r-lg); box-shadow: var(--shadow); }
+.queue, .progress, .bulk-panel, .recon-section, .recon-summary-card, .ocr-panel, .ocr-compare, .cu-steps li,
+.txn-table, .banner { border-radius: var(--r-md); }
+.working .queue { box-shadow: var(--shadow); }
+
+/* ---------- buttons ---------- */
+.btn {
+  border-radius: var(--r-md); background: var(--grad); color: var(--on-grad);
+  box-shadow: none; font-weight: 600; letter-spacing: 0;
+  transition: background-color .15s, border-color .15s, opacity .15s;
+}
+.btn:hover:not(:disabled) { transform: none; filter: none; box-shadow: none; opacity: .88; }
+.btn.ghost { background: var(--surface); color: var(--ink); border-color: var(--line-strong); }
+.btn.ghost:hover:not(:disabled) { background: var(--surface-3); border-color: var(--line-strong); opacity: 1; }
+.btn:disabled { background: var(--surface-3); color: var(--faint); border-color: var(--line); }
+.dl-menu { border-radius: var(--r-md); background: var(--surface); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18); }
+.dl-menu button { border-radius: var(--r-sm); }
+
+/* ---------- inputs ---------- */
+input, select, body.app-day input, body.app-day select {
+  background: var(--surface); border-color: var(--line-strong); border-radius: var(--r-sm);
+}
+select option, body.app-day select option { background: var(--surface); color: var(--ink); }
+input:focus, select:focus { border-color: var(--ink); box-shadow: 0 0 0 1px var(--ink); }
+.txn-table td input, .txn-table td select,
+body.app-day .txn-table td input, body.app-day .txn-table td select { background: transparent; }
+.txn-table td input:focus, .txn-table td select:focus,
+body.app-day .txn-table td input:focus, body.app-day .txn-table td select:focus { background: var(--surface); border-color: var(--ink); box-shadow: none; }
+
+/* ---------- drop zone ---------- */
+.drop { background: var(--surface); border-radius: var(--r-lg); }
+.drop::before, body.app-day .drop::before { border: 1px dashed var(--line-strong); border-radius: var(--r-md); }
+.drop:hover::before, body.app-day .drop:hover::before { border-color: var(--faint); }
+.drop.over { background: var(--surface-3); box-shadow: none; transform: none; border-color: var(--line-strong); }
+.drop.over::before { border-color: var(--ink); }
+.drop-cta { border-radius: var(--r-md); background: var(--surface-3); }
+.drop:hover .drop-cta { background: var(--surface-3); border-color: var(--faint); }
+.drop-art .da-badge { animation: none; }
+
+/* ---------- queue / progress / log ---------- */
+.queue li::before { background: var(--faint); box-shadow: none; border-radius: 50%; width: 6px; height: 6px; }
+.progress .bar, body.app-day .progress .bar { background: var(--surface-3); border-radius: 2px; }
+.progress .bar > div { background: var(--ink); box-shadow: none; border-radius: 2px; }
+.log, body.app-day .log { background: #18181b; color: #d4d4d8; border-color: var(--line); border-radius: var(--r-md); }
+
+/* ---------- tabs & segmented controls ---------- */
+.tabs, .view-tabs, .seg, .theme-seg { border-radius: var(--r-md); }
+.tab, .view-tab, .seg-b, .theme-seg button { border-radius: var(--r-sm) !important; }
+.tab.active, .view-tab.active { background: var(--surface-3); box-shadow: none; border-color: var(--line-strong); }
+.seg-b.on { background: var(--ink); color: var(--bg); }
+.mode-tabs, body.app-day .mode-tabs { background: var(--surface); border-color: var(--line); border-radius: var(--r-md); }
+.mode-tab { border-radius: var(--r-sm); }
+.mode-tab.active, body.app-day .mode-tab.active { background: var(--surface-3); border-color: var(--line-strong); box-shadow: none; }
+.mode-ico { border-radius: var(--r-sm); }
+.mode-tab.active .mode-ico, body.app-day .mode-tab.active .mode-ico { background: var(--surface); color: var(--ink); }
+.mode-glider, body.app-day .mode-glider {
+  background: var(--surface-3); border: 1px solid var(--line-strong); box-shadow: none; border-radius: var(--r-sm);
+}
+
+/* ---------- badges, tags, banners ---------- */
+.tag, .ocr-badge, .cc-badge, .tpl-n, .ocr-tag, .recon-diff-badge, .hist-badge, .world-chip, .idle-notice,
+#lock .pill, #lock .phase-chip, #lock .theme-chip, #lock .tick, #lock .clocks, #lock .hint { border-radius: var(--r-sm) !important; }
+.cc-badge { color: var(--ink); border-color: var(--line-strong); background: var(--surface-3); }
+.ocr-badge { border-color: var(--warn-amber); }
+.tpl-n { color: var(--muted); background: var(--surface-3); }
+.banner.ok { border-color: var(--ok); }
+.banner.warn { border-color: var(--warn-amber); }
+.banner.err { border-color: var(--warn); }
+.banner .dot, .banner.ok .dot, .banner.warn .dot, .banner.err .dot { box-shadow: none; }
+.recon-summary-card::before, .recon-summary-card.rs-matched::before, .recon-summary-card.rs-mismatch::before,
+.recon-summary-card.rs-onlya::before, .recon-summary-card.rs-onlyb::before, .recon-summary-card.hs-total::before,
+.recon-summary-card.hs-today::before, .recon-summary-card.hs-month::before, .recon-summary-card.hs-failed::before { box-shadow: none; }
+.recon-summary-card.hs-total::before { background: var(--ink); }
+.recon-drop:hover, .recon-drop.has-file { background: var(--surface-2); }
+.idle-notice::before { box-shadow: none; }
+.sections > summary, .pivot-caret, .recon-section-head .recon-caret, .ocr-panel > summary::before { color: var(--ink); }
+.link-btn:hover, .back-link:hover, .signature a { color: var(--ink); }
+.signature a { text-decoration: underline; }
+
+/* ---------- modal ---------- */
+.modal, body.app-day .modal { background: rgba(0, 0, 0, 0.45); }
+.modal-box, body.app-day .modal-box { background: var(--surface); border-radius: var(--r-lg); box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25); }
+
+/* ---------- motion: plain fades, no blur ---------- */
+@keyframes ss-view-out { to { opacity: 0; } }
+@keyframes ss-view-in { from { opacity: 0; } }
+@keyframes ss-lock-out { to { opacity: 0; } }
+@keyframes ss-lock-in { from { opacity: 0; } }
+::view-transition-group(ss-view) { border-radius: 0; }
+
+/* ---------- lock screen ---------- */
+#lock {
+  --bg: #121316; --bg-2: #121316;
+  --surface: #1a1b1f; --surface-2: #1f2024; --surface-3: #26272c;
+  --ink: #ececef; --muted: #a3a3ab; --faint: #85858e;
+  --line: #2b2c31; --line-strong: #3a3b41;
+  --accent: #ececef; --grad: #ececef; --on-grad: #121316;
+  --ok: #3fb27f; --warn: #e5484d; --amber: #d29922;
+  --ok-bg: rgba(63,178,127,.10); --ok-line: rgba(63,178,127,.35);
+  --amber-bg: rgba(210,153,34,.10); --amber-line: rgba(210,153,34,.35);
+  --time-grad: none; --field: #121316; --menu-bg: #1a1b1f; --hint-bg: #1a1b1f;
+  --shadow: 0 1px 2px rgba(0,0,0,.35); --phase: var(--muted) !important;
+  --sans: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg) !important;
+}
+#lock.day {
+  --bg: #f4f4f5; --bg-2: #f4f4f5;
+  --surface: #ffffff; --surface-2: #fafafa; --surface-3: #f1f1f3;
+  --ink: #18181b; --muted: #52525b; --faint: #71717a;
+  --line: #e4e4e7; --line-strong: #d4d4d8;
+  --accent: #18181b; --grad: #18181b; --on-grad: #ffffff;
+  --ok: #1e7d4f; --warn: #c62828; --amber: #a15c00;
+  --ok-bg: rgba(30,125,79,.08); --ok-line: rgba(30,125,79,.3);
+  --amber-bg: rgba(161,92,0,.08); --amber-line: rgba(161,92,0,.3);
+  --field: #ffffff; --menu-bg: #ffffff; --hint-bg: #ffffff;
+  --shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+#lock, #lock .glass, #lock .pill, #lock .lock input, #lock .hint, #lock .phase-chip { transition: none !important; }
+body { transition: none !important; }
+#lock #ls-sky, #lock .globe-wrap, #lock .legend { display: none !important; }
+#lock .hero { grid-template-columns: minmax(0, 1fr) !important; }
+#lock .glass { border-radius: var(--r-lg); border-color: var(--line); }
+#lock .time { background: none !important; color: var(--ink) !important; -webkit-text-fill-color: var(--ink); font-weight: 600; letter-spacing: -0.02em; }
+#lock .time small { -webkit-text-fill-color: var(--muted); }
+#lock .lock .ico { border-radius: var(--r-md); color: var(--ink); }
+#lock .lock input { border-radius: var(--r-md); }
+#lock .lock input:focus { border-color: var(--ink); box-shadow: 0 0 0 1px var(--ink); }
+#lock .lock button { border-radius: var(--r-md); background: var(--grad); color: var(--on-grad); }
+#lock .lock button:hover { opacity: .88; }
+#lock .sdot.open { box-shadow: none; }
+#lock .sunpath-phase { color: var(--ink); }
