@@ -1,7 +1,7 @@
 {
   "name": "statement-studio",
   "productName": "Statement Studio",
-  "version": "8.13.0",
+  "version": "8.16.0",
   "description": "Statement Studio - Bank Statement Converter & PDF Studio",
   "main": "main.js",
   "author": "Dixit Prajapati",

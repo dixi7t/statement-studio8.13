@@ -81,3 +81,9 @@ and disable devtools in release builds.
   distributing the app to other people.
 - **No code from other commercial converters is included.** The bank list comes from Intuit and
   all feature code was written new.
+
+## V8.16: file compressor
+`build/add-compressor.mjs` turns the V8.15 `index.html` into V8.16. It decodes the embedded
+PdfCraft editor (`#pdfcraftSrc`), injects `build/compress/compress.{css,html,js}` with exact-text
+patches, and encodes it back. Uses only what is already embedded (pdf-lib, PDF.js, JSZip) plus
+browser canvas and `DecompressionStream`; no network. PDF hand-off to Convert is never compressed.
