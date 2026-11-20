@@ -1,0 +1,60 @@
+<!-- V8.16: file compressor -->
+<div class="cz" id="cz" hidden role="dialog" aria-modal="true" aria-labelledby="cz-title">
+  <div class="cz-bar">
+    <button class="btn ghost" id="cz-back" type="button">← Back</button>
+    <div class="cz-h"><b id="cz-title">Compress files</b><small>PDFs, photos, Word, Excel, PowerPoint and more. Everything stays on this computer.</small></div>
+    <div class="cz-total" id="cz-total" aria-live="polite"></div>
+  </div>
+  <div class="cz-body">
+    <main class="cz-main">
+      <div class="ss-drop cz-drop" id="cz-drop" role="button" tabindex="0" aria-label="Choose files to compress">
+        <div class="cz-art" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14h6v6"/><path d="M20 10h-6V4"/><path d="m14 10 7-7"/><path d="m3 21 7-7"/></svg></div>
+        <h2>Drop files to make them smaller</h2>
+        <p>PDF · JPG · PNG · WebP · HEIC · Word · Excel · PowerPoint · and any other file</p>
+        <span class="ss-cta">Browse files</span>
+      </div>
+      <div class="cz-list" id="cz-list" aria-live="polite"></div>
+    </main>
+    <aside class="cz-side">
+      <div class="ss-block">
+        <div class="ss-label">Strength</div>
+        <div class="seg cz-seg" role="radiogroup" aria-label="Compression strength">
+          <label><input type="radio" name="czlevel" value="light">Light</label>
+          <label><input type="radio" name="czlevel" value="balanced" checked>Balanced</label>
+          <label><input type="radio" name="czlevel" value="strong">Strong</label>
+          <label><input type="radio" name="czlevel" value="max">Max</label>
+        </div>
+        <p class="hint" id="cz-lvlhint"></p>
+      </div>
+      <div class="ss-block">
+        <div class="ss-label">Photos</div>
+        <label class="f"><span>Save photos as</span><select id="cz-fmt">
+          <option value="auto">Best choice (recommended)</option>
+          <option value="image/jpeg">JPG</option>
+          <option value="image/webp">WebP</option>
+          <option value="image/png">PNG</option>
+        </select></label>
+        <label class="f"><span>Longest side up to</span><select id="cz-px">
+          <option value="">Set by strength</option>
+          <option value="3840">3840 px (4K)</option>
+          <option value="2560">2560 px</option>
+          <option value="1920">1920 px (Full HD)</option>
+          <option value="1280">1280 px</option>
+          <option value="1024">1024 px</option>
+          <option value="800">800 px</option>
+        </select></label>
+        <p class="hint" style="margin-top:10px">Location and camera details are removed from photos.</p>
+      </div>
+      <div class="ss-block">
+        <div class="ss-label">Other files</div>
+        <p>Word, Excel and PowerPoint files keep their format and their pictures are shrunk. Any other file is packed into a smaller <b>.zip</b>.</p>
+      </div>
+      <div class="cz-actions">
+        <button class="btn go big" id="cz-all" type="button" disabled>Download all</button>
+        <button class="btn" id="cz-redo" type="button" disabled>Compress again with these settings</button>
+        <button class="btn ghost" id="cz-clear" type="button" disabled>Clear list</button>
+      </div>
+    </aside>
+  </div>
+</div>
+<input type="file" id="cz-picker" multiple hidden>
